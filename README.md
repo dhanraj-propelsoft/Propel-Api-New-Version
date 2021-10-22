@@ -10,7 +10,7 @@ Started This File For Dhanaraj At 09/10/2021
         php artisan db:seed --class=GenderSeeder
         php artisan db:seed --class=BloodGroupSeeder
         php artisan db:seed --class=AddressTypeSeeder
-    5)
+    5)php artisan migrate --path=/database/migrations/person_rel_tables_2021
 
 
 create Seeder File Command For
@@ -27,3 +27,4 @@ seeder Table For
 9)Person Current Status
 10)personLife Status
 11)person Depone Status
+

@@ -33,4 +33,11 @@ class PersonAPIController extends Controller
         $response =  $this->personService->getPersonDataByMobileNo($mobileNo);
         return $response;
     }
+
+    public function personStore(Request $request)
+    {
+
+        $response = $this->personService->personStore($request->all(), "Person");
+        return response()->json($response);
+    }
 }

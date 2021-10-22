@@ -1,13 +1,24 @@
 <?php
 
 namespace App\Http\Controllers\API\Person\Repository;
+
+use App\Models\PersonModel\Person;
+
 class PersonRepository
 {
     public function getPersonDataByMobileNo($mobileNo)
     {
-        dd("Repo File");
+  
+           
+        $datas = Person::with('personMobile','user','personEmail');
+        $datas->whereHas('personMobile', function ($query) use ($mobileNo)
+        {
+           $query->where(['mobile_no' => $mobileNo]);
+        });
 
-        $response =  $this->personrepo->getPersonDataByMobileNo($mobileNo);             
-        return $response;
+    $datass = $datas->first();
+
+        return $datass;        
+       
     }
 }
