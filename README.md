@@ -28,3 +28,9 @@ seeder Table For
 10)personLife Status
 11)person Depone Status
 
+organization Seeder file
+1)organization Category 
+2)Organization  ownership
+
+
+Samplke by dhana
